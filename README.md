@@ -2,7 +2,7 @@
 
 ### The project includes the following text components:
 
--Date Picker
+- Date Picker
 - Modal Window
 
 
