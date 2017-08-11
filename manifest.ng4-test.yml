@@ -1,0 +1,9 @@
+applications:
+- path: dist
+  memory: 16M
+  instances: 1
+  domain: mybluemix.net
+  name: ng4-test
+  host: ng4-test
+  disk_quota: 48M
+  buildpack: staticfile_buildpack

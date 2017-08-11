@@ -1,0 +1,29 @@
+<h3>
+  date-picker works!
+</h3>
+
+<hr />
+
+<div class="container">
+  <form novalidate [formGroup]="testForm">
+
+    <div class="form-group">
+      <label for="date">Date</label>
+      <date-picker id="date" formControlName="date" mode="date"></date-picker>
+    </div>
+    <div class="form-group">
+      <label for="time">Time</label>
+      <date-picker id="time" formControlName="time" mode="time"></date-picker>
+    </div>
+    <div class="form-group">
+      <label for="datetime">Date&Time</label>
+      <date-picker id="datetime" formControlName="datetime" mode="datetime"></date-picker>
+    </div>
+  </form>
+</div>
+
+<hr />
+  <a class="bg-success" href="https://github.com/rd-dev-ukraine/angular-io-datepicker">Go to the repository on GitHub</a>
+<hr />
+
+<button class="btn btn-danger" (click)="goToPickers()">Go Back</button>
