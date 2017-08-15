@@ -26,6 +26,7 @@ export class NgxModdialogComponent implements OnInit {
   onClick() {
     const dialogRef = this.modal.alert()
       .size('lg')
+      .isBlocking(true)
       .showClose(true)
       .title('A simple Alert style modal window')
       .body(`
@@ -38,11 +39,19 @@ export class NgxModdialogComponent implements OnInit {
                 <li>Dismissed with default keyboard key (ESC)</li>
                 <li>Close wth button click</li>
                 <li>HTML content</li>
-            </ul>`)
+            </ul>
+            <input />
+            `)
+      .okBtn('Ok')
       .open();
 
-    dialogRef.result
-      .then(result => alert(`The result is: ${result}`));
+    dialogRef
+      .then(dialogRef => {
+        dialogRef.result.then(
+          result => { console.log(`${result}`) },
+          result => { console.log(`${result}`) }
+        );
+      });
   }
 
 }

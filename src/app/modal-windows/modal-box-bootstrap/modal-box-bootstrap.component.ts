@@ -32,6 +32,9 @@ export class ModalBoxBootstrapComponent implements OnInit {
   btnSave() {
     this.visible = false;
   }
+  btnCancel() {
+    this.visible = false;
+  }
 
   goToModalWindows() {
     this.router.navigate(["modalwindows"]);

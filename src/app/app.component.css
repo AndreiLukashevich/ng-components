@@ -1,4 +1,7 @@
-  :host {
+ @import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"; 
+
+
+:host {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -20,4 +23,4 @@ nav a.active {
     background-color: #E03237;
     color:white;
 }  
- @import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";  
+ 
