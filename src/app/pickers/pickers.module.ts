@@ -12,6 +12,7 @@ import {DpDatePickerModule} from 'ng2-date-picker';
 
 import { PickersRoutingModule } from "./pickers-routing.module";
 
+import { PickersComponent } from './pickers.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { TimePickerComponent } from './time-picker/time-picker.component';
 import { DateTimePickerComponent } from './date-time-picker/date-time-picker.component';
@@ -28,6 +29,7 @@ import { DateTimePickerComponent } from './date-time-picker/date-time-picker.com
         DpDatePickerModule
     ],
     declarations: [
+        PickersComponent,
         DatePickerComponent,
         TimePickerComponent,
         DateTimePickerComponent

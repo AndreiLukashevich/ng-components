@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from "@angular/forms";
@@ -8,27 +9,28 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HomeComponent } from './home/home.component';
-import { PickersComponent } from './pickers/pickers.component';
 
 import { PickersModule } from './pickers/pickers.module';
 import { ModalWindowsModule } from './modal-windows/modal-windows.module';
 import { AutocompleteModule } from './autocomplete/autocomplete.module';
+import { PrimengModule } from './primeng/primeng.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    PickersComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
     AppRoutingModule,
     PickersModule,
     ModalWindowsModule,
-    AutocompleteModule
+    AutocompleteModule,
+    PrimengModule
   ],
   providers: [],
   bootstrap: [AppComponent]
