@@ -9,7 +9,7 @@ import { Customer } from './customer';
   moduleId: module.id,
   selector: 'app-modal-box-bootstrap',
   templateUrl: 'modal-box-bootstrap.component.html',
-  styleUrls: ['modal-box-bootstrap.component.css', '../modal-windows.component.css', '../../../../node_modules/bootstrap/dist/css/bootstrap.css']
+  styleUrls: ['modal-box-bootstrap.component.css', '../../app.component.css']
 })
 export class ModalBoxBootstrapComponent implements OnInit {
 

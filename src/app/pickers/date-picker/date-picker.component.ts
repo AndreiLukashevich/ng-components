@@ -6,7 +6,7 @@ import { FormControl, FormGroup, Validators, FormBuilder } from "@angular/forms"
   moduleId: module.id,
   selector: 'app-date-picker',
   templateUrl: 'date-picker.component.html',
-  styleUrls: ['date-picker.component.css', '../pickers.component.css', '../../../../node_modules/bootstrap/dist/css/bootstrap.css']
+  styleUrls: ['date-picker.component.css', '../../app.component.css']
 })
 export class DatePickerComponent implements OnInit {
 

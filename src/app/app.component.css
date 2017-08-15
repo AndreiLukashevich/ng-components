@@ -2,7 +2,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h1.pickers-title {
+h1.app-title {
     padding: 0 0 6px 65px;
     background: url('images/angular.png') no-repeat; 
 }
@@ -20,3 +20,4 @@ nav a.active {
     background-color: #E03237;
     color:white;
 }  
+ @import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";  

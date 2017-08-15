@@ -1,0 +1,12 @@
+ <p>
+  ng-test-autocomplete works!
+</p>
+
+<h1>Search color</h1>
+<ng2-completer [inputClass]="'form-control'" [(ngModel)]="searchStr" [datasource]="dataService" [minSearchLength]="0"></ng2-completer>
+<h1>Search captain</h1>
+<ng2-completer [(ngModel)]="captain" [datasource]="captains" [minSearchLength]="0"></ng2-completer>
+
+<br />
+<hr />
+<button class="btn btn-danger" (click)="goToAutocomplete()">Go Back</button> 

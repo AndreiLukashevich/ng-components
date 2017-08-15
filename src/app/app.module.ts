@@ -12,6 +12,7 @@ import { PickersComponent } from './pickers/pickers.component';
 
 import { PickersModule } from './pickers/pickers.module';
 import { ModalWindowsModule } from './modal-windows/modal-windows.module';
+import { AutocompleteModule } from './autocomplete/autocomplete.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ModalWindowsModule } from './modal-windows/modal-windows.module';
     HttpModule,
     AppRoutingModule,
     PickersModule,
-    ModalWindowsModule
+    ModalWindowsModule,
+    AutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

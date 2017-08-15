@@ -6,8 +6,7 @@ import { FormControl, FormGroup, Validators, FormBuilder } from "@angular/forms"
   moduleId: module.id,
   selector: 'app-time-picker',
   templateUrl: 'time-picker.component.html',
-  styleUrls: ['time-picker.component.css', '../pickers.component.css',
-    '../../../../node_modules/bootstrap/dist/css/bootstrap.css']
+  styleUrls: ['time-picker.component.css', '../../app.component.css']
 })
 export class TimePickerComponent implements OnInit {
 

@@ -4,6 +4,7 @@ import { RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { PickersComponent } from "./pickers/pickers.component";
 import { ModalWindowsComponent } from "./modal-windows/modal-windows.component";
+import { AutocompleteComponent, } from './autocomplete/autocomplete.component';
 
 @NgModule({
     imports: [RouterModule.forRoot([
@@ -14,7 +15,8 @@ import { ModalWindowsComponent } from "./modal-windows/modal-windows.component";
         },
         { path: "home", component: HomeComponent },
         { path: "pickers", component: PickersComponent },
-        { path: "modalwindows", component: ModalWindowsComponent }
+        { path: "modalwindows", component: ModalWindowsComponent },
+        { path: "autocomplete", component: AutocompleteComponent }
     ])],
     exports: [RouterModule] 
 })

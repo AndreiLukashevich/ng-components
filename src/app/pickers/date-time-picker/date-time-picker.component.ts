@@ -8,8 +8,7 @@ import { IDatePickerConfig } from '../../../../node_modules/ng2-date-picker/date
   moduleId: module.id,
   selector: 'app-date-time-picker',
   templateUrl: 'date-time-picker.component.html',
-  styleUrls: ['date-time-picker.component.css', '../pickers.component.css',
-    '../../../../node_modules/bootstrap/dist/css/bootstrap.css']
+  styleUrls: ['date-time-picker.component.css', '../../app.component.css']
 })
 export class DateTimePickerComponent implements OnInit {
 
