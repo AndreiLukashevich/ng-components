@@ -3,10 +3,33 @@
 </h3>
 
 <hr />
-<p-calendar [(ngModel)]="value"></p-calendar>
+
+<div class="container">
+  <form novalidate [formGroup]="testForm">
+    <div class="form-group">
+      <h3>Date</h3>
+      <p-calendar id="date" formControlName="date" [showIcon]="true"></p-calendar>
+    </div>
+    <div class="form-group">
+      <h3>Multiple Date</h3>
+      <p-calendar id="datem" formControlName="datem" [showIcon]="true" selectionMode="multiple"  inputStyleClass="test"></p-calendar>
+    </div>
+    <div class="form-group">
+      <h3>Time Only</h3>
+      <p-calendar id="time" formControlName="time" [timeOnly]="true" hourFormat="12"></p-calendar>
+    </div>
+    <div class="form-group">
+      <h3>Date&Time</h3>
+      <p-calendar id="datetime" formControlName="datetime" [showTime]="true" hourFormat="12"></p-calendar>
+    </div>
+  </form>
+</div>
 
 <hr />
-  <a class="bg-success" href="https://github.com/rd-dev-ukraine/angular-io-datepicker">Go to the repository on GitHub</a>
+<a class="bg-success" href="https://github.com/primefaces/primeng">Go to the repository on GitHub</a>
+<hr />
+<hr />
+<a class="bg-primary" href="https://www.primefaces.org/primeng/#/calendar">Go to the site PrimeNg</a>
 <hr />
 
 <button class="btn btn-danger" (click)="goToPrimeng()">Go Back</button>
