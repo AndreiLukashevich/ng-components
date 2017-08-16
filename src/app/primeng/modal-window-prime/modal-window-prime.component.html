@@ -4,8 +4,30 @@
 
 <hr />
 
+<p-growl [value]="msgs"></p-growl>
+<p-confirmDialog></p-confirmDialog>
+<button type="button" (click)="confirm1()" pButton icon="fa-check" label="Confirm"></button>
+<button type="button" (click)="confirm2()" pButton icon="fa-trash" label="Delete"></button>
+
+<p-dialog header="Godfather I" [(visible)]="display" modal="modal" width="300" [responsive]="true">
+  <p>The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding. His beloved
+    son Michael has just come home from the war, but does not intend to become part of his father's business. Through Michael's
+    life the nature of the family business becomes clear. The business of the family is just like the head of the family,
+    kind and benevolent to those who give respect, but given to ruthless violence whenever anything stands against the good
+    of the family.</p>
+  <p-footer>
+    <button type="button" pButton icon="fa-check" (click)="display=false" label="Yes"></button>
+    <button type="button" pButton icon="fa-close" (click)="display=false" label="No"></button>
+  </p-footer>
+</p-dialog>
+
+<button type="button" (click)="showDialog()" pButton icon="fa-external-link-square" label="Show"></button>
+
 <hr />
-<a class="bg-success" href="https://github.com/vlio20/angular-datepicker">Go to the repository on GitHub</a>
+<a class="bg-success" href="https://github.com/primefaces/primeng">Go to the repository on GitHub</a>
+<hr />
+<hr />
+<a class="bg-primary" href="https://www.primefaces.org/primeng/#/confirmdialog">Go to the site PrimeNg</a>
 <hr />
 
 

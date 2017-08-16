@@ -13,6 +13,8 @@ import { ModalWindowPrimeComponent } from './modal-window-prime/modal-window-pri
 import {ButtonModule} from 'primeng/primeng';
 import {CalendarModule} from 'primeng/primeng';
 import {AutoCompleteModule} from 'primeng/primeng';
+import {ConfirmDialogModule, GrowlModule} from 'primeng/primeng';
+import {DialogModule} from 'primeng/primeng';
 
 @NgModule({
     imports: [
@@ -22,7 +24,10 @@ import {AutoCompleteModule} from 'primeng/primeng';
         PrimengRoutingModule,
         ButtonModule,
         CalendarModule,
-        AutoCompleteModule
+        AutoCompleteModule,
+        ConfirmDialogModule,
+        GrowlModule,
+        DialogModule
     ],
     declarations: [
         PrimengComponent,
