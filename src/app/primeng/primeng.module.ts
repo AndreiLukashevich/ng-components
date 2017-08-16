@@ -12,6 +12,7 @@ import { ModalWindowPrimeComponent } from './modal-window-prime/modal-window-pri
 
 import {ButtonModule} from 'primeng/primeng';
 import {CalendarModule} from 'primeng/primeng';
+import {AutoCompleteModule} from 'primeng/primeng';
 
 @NgModule({
     imports: [
@@ -20,7 +21,8 @@ import {CalendarModule} from 'primeng/primeng';
         ReactiveFormsModule,
         PrimengRoutingModule,
         ButtonModule,
-        CalendarModule
+        CalendarModule,
+        AutoCompleteModule
     ],
     declarations: [
         PrimengComponent,
