@@ -33,14 +33,21 @@ export class CustomAutocompleteComponent implements OnInit {
   ngOnInit() {
   }
 
-  filter(event: any) {
+  filterr(event: any) {
     if (this.query !== "") {
       this.filteredList = this.countries.filter(function (el) {
         return el.toLowerCase().indexOf(this.query.toLowerCase()) > -1;
       }.bind(this));
-      if (event.code == "ArrowDown" && this.selectedIdx < this.filteredList.length) {
+      if (event.code == "ArrowDown" ) {
         console.log(event);
         this.selectedIdx++;
+        console.log(this.filteredList);
+        let temp = document.getElementById('list325').children;
+        // for (let i = 0; i < temp.length; i++) {
+        //   temp[0].classList.toggle('test0');
+        // }
+        temp[2].classList.add('test0');
+        console.log(temp);
       } else if (event.code == "ArrowUp" && this.selectedIdx > 0) {
         console.log(event);
         this.selectedIdx--;
@@ -56,8 +63,8 @@ export class CustomAutocompleteComponent implements OnInit {
   }
 
   handleClick(event) {
-    var clickedComponent = event.target;
-    var inside = false;
+    let clickedComponent = event.target;
+    let inside = false;
     do {
       if (clickedComponent === this.elementRef.nativeElement) {
         inside = true;

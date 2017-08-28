@@ -5,9 +5,9 @@
 <div class="container">
   <div class="input-field col s12">
     <label for="country">Country</label>
-    <input id="country" type="text" class="form-control validate filter-input" [(ngModel)]=query (keyup)=filter($event)>
+    <input id="country" type="text" class="form-control validate filter-input" [(ngModel)]=query (keyup)=filterr($event)>
   </div>
-  <div class="suggestions" *ngIf="filteredList.length > 0">
+  <div id="list325" class="suggestions" *ngIf="filteredList.length > 0">
     <ul *ngFor="let item of filteredList">
       <li>
         <a (click)="select(item)">{{item}}</a>
