@@ -8,18 +8,22 @@ import { NgTestAutocompleteComponent } from './ng-test-autocomplete/ng-test-auto
 
 import { Ng2CompleterModule } from "ng2-completer";
 import { CustomAutocompleteComponent } from './custom-autocomplete/custom-autocomplete.component';
+import { AngularTypeaheadComponent } from './angular-typeahead/angular-typeahead.component';
+import { NgxTypeaheadModule } from 'ngx-typeahead';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     AutocompleteRoutingModule,
-    Ng2CompleterModule
+    Ng2CompleterModule,
+    NgxTypeaheadModule
   ],
   declarations: [
     AutocompleteComponent,
     NgTestAutocompleteComponent,
-    CustomAutocompleteComponent
+    CustomAutocompleteComponent,
+    AngularTypeaheadComponent
   ]
 })
 export class AutocompleteModule { }

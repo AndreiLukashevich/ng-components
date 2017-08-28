@@ -1,0 +1,15 @@
+<h4>
+  angular-typeahead works!
+</h4>
+
+<div class="search-results">
+  <input class="form-control" [value]="search" ngxTypeahead [taUrl]="url" [taParams]="params" (taSelected)="handleResultSelected($event)">
+</div>
+
+<br />
+<hr />
+<button class="btn btn-danger" (click)="goToAutocomplete()">Go Back</button>
+
+<hr />
+<a class="bg-success" href="https://github.com/orizens/ngx-typeahead">Go to the repository on GitHub</a>
+<hr />
