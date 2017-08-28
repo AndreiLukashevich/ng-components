@@ -2,6 +2,20 @@
   custom-autocomplete works!
 </h4>
 
+<div class="container">
+  <div class="input-field col s12">
+    <label for="country">Country</label>
+    <input id="country" type="text" class="form-control validate filter-input" [(ngModel)]=query (keyup)=filter($event)>
+  </div>
+  <div class="suggestions" *ngIf="filteredList.length > 0">
+    <ul *ngFor="let item of filteredList">
+      <li>
+        <a (click)="select(item)">{{item}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
 <br />
 <hr />
 <button class="btn btn-danger" (click)="goToAutocomplete()">Go Back</button>
