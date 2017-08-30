@@ -24,7 +24,7 @@ export class CustomAutocompleteComponent implements OnInit {
     "Spain", "Sweden", "Switzerland", "Turkey", "Ukraine", "United Kingdom", "Vatican City"];
   public filteredList = [];
   public elementRef;
-  selectedIdx: number;
+  public selectedIdx: number = 0;
 
   constructor(private router: Router, myElement: ElementRef) {
     this.elementRef = myElement;
@@ -38,19 +38,20 @@ export class CustomAutocompleteComponent implements OnInit {
       this.filteredList = this.countries.filter(function (el) {
         return el.toLowerCase().indexOf(this.query.toLowerCase()) > -1;
       }.bind(this));
-      if (event.code == "ArrowDown" ) {
-        console.log(event);
+      if (event.code == "ArrowDown") {
         this.selectedIdx++;
-        console.log(this.filteredList);
-        let temp = document.getElementById('list325').children;
-        // for (let i = 0; i < temp.length; i++) {
-        //   temp[0].classList.toggle('test0');
-        // }
-        temp[2].classList.add('test0');
-        console.log(temp);
-      } else if (event.code == "ArrowUp" && this.selectedIdx > 0) {
-        console.log(event);
+        console.log(this.selectedIdx);
+        // console.log(this.filteredList.length);
+        if (this.selectedIdx === this.filteredList.length) {
+          this.selectedIdx = 0;
+        }
+      } else if (event.code == "ArrowUp") {
         this.selectedIdx--;
+        console.log(this.selectedIdx);
+        // console.log(this.filteredList.length);
+        if (this.selectedIdx == 0) {
+          this.selectedIdx = this.filteredList.length;
+        }
       }
     } else {
       this.filteredList = [];
