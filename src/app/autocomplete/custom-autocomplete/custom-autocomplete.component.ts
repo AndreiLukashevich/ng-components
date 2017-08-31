@@ -24,7 +24,7 @@ export class CustomAutocompleteComponent implements OnInit {
     "Spain", "Sweden", "Switzerland", "Turkey", "Ukraine", "United Kingdom", "Vatican City"];
   public filteredList = [];
   public elementRef;
-  public selectedIdx: number = 0;
+  public selectedIdx: number = -1;
 
   constructor(private router: Router, myElement: ElementRef) {
     this.elementRef = myElement;
@@ -40,21 +40,51 @@ export class CustomAutocompleteComponent implements OnInit {
       }.bind(this));
       if (event.code == "ArrowDown") {
         this.selectedIdx++;
-        console.log(this.selectedIdx);
-        // console.log(this.filteredList.length);
-        if (this.selectedIdx === this.filteredList.length) {
+        if (this.selectedIdx < 0) {
           this.selectedIdx = 0;
         }
+
+        if (this.selectedIdx > 0 && this.selectedIdx < this.filteredList.length) {
+          document.getElementById('list325').children[this.selectedIdx - 1]
+            .removeAttribute('style');
+        }
+        if (this.selectedIdx > -1 && this.selectedIdx < this.filteredList.length) {
+          document.getElementById('list325').children[this.selectedIdx]
+            .setAttribute('style', 'background-color: green');
+        }
+        //this.selectedIdx++;
+        console.log(this.selectedIdx);
+        if (this.selectedIdx > this.filteredList.length - 1) {
+          this.selectedIdx = this.filteredList.length - 1;
+        }
+        // console.log(this.filteredList.length);
+
       } else if (event.code == "ArrowUp") {
         this.selectedIdx--;
-        console.log(this.selectedIdx);
-        // console.log(this.filteredList.length);
-        if (this.selectedIdx == 0) {
-          this.selectedIdx = this.filteredList.length;
+        if (this.selectedIdx < 0) {
+          this.selectedIdx = 0;
         }
+
+        if (this.selectedIdx > -1 && this.selectedIdx < this.filteredList.length - 1) {
+          document.getElementById('list325').children[this.selectedIdx + 1]
+            .removeAttribute('style');
+        }
+        if (this.selectedIdx > -1 && this.selectedIdx < this.filteredList.length) {
+          document.getElementById('list325').children[this.selectedIdx]
+            .setAttribute('style', 'background-color: green');
+        }
+        console.log(this.selectedIdx);
+        if (this.selectedIdx > this.filteredList.length - 1) {
+          this.selectedIdx = this.filteredList.length - 1;
+        }
+        // console.log(this.filteredList.length);
+      } else if (event.code !== "") {
+        console.log("Backspace");
+        this.selectedIdx = -1;
       }
     } else {
       this.filteredList = [];
+      this.selectedIdx = -1;
     }
   }
 
