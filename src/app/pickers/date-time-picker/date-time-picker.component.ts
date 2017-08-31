@@ -13,35 +13,24 @@ import { IDatePickerConfig } from '../../../../node_modules/ng2-date-picker/date
 export class DateTimePickerComponent implements OnInit {
 
   testForm: FormGroup;
+  
   configDate: IDatePickerConfig = {
     allowMultiSelect: true,
     format: "MM/DD/YYYY"
   };
-  // configTime: any = {
-  // };
-  // config: IDatePickerConfig = {
-  //   allowMultiSelect: true,
-  //   format: "MM/DD/YYYY"
-  // };
   configTime: any = {
     format: "hh:mm A"
   };
-  config: any;
-  constructor(private router: Router, private fb: FormBuilder) {
+  config = {
+    format: "MM/DD/YYYY", 
+    allowMultiSelect: true
   }
 
-  ngOnChanges() {
-    this.config = true
+  constructor(private router: Router, private fb: FormBuilder) {
   }
 
   ngOnInit() {
     this.buildForm();
-    this.config = {
-      format: "MM/DD/YYYY", 
-      allowMultiSelect: true
-    }
-    console.log(document.getElementById("date0"))
-    console.log(this.config);
   }
 
   buildForm() {
