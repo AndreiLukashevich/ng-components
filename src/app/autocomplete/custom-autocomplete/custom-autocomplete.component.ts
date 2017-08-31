@@ -77,8 +77,21 @@ export class CustomAutocompleteComponent implements OnInit {
         if (this.selectedIdx > this.filteredList.length - 1) {
           this.selectedIdx = this.filteredList.length - 1;
         }
-        // console.log(this.filteredList.length);
-      } else if (event.code !== "") {
+
+      }
+      else if (event.code == "Enter") {
+        console.log("Enter");
+        // console.log(document.getElementById('list325')
+        //   .children[this.selectedIdx]
+        //   .children[0]
+        //   .children[0].textContent);
+        this.query = document.getElementById('list325')
+        .children[this.selectedIdx]
+        .children[0]
+        .children[0].textContent;
+        this.filteredList = [];
+      }
+      else if (event.code !== "") {
         console.log("Backspace");
         this.selectedIdx = -1;
       }
@@ -92,6 +105,11 @@ export class CustomAutocompleteComponent implements OnInit {
     this.query = item;
     this.filteredList = [];
   }
+
+  // enter(item) {
+  //   this.query = item;
+  //   this.filteredList = [];
+  // }
 
   handleClick(event) {
     let clickedComponent = event.target;
