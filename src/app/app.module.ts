@@ -14,11 +14,13 @@ import { PickersModule } from './pickers/pickers.module';
 import { ModalWindowsModule } from './modal-windows/modal-windows.module';
 import { AutocompleteModule } from './autocomplete/autocomplete.module';
 import { PrimengModule } from './primeng/primeng.module';
+import { DurationComponent } from './duration/duration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    DurationComponent
   ],
   imports: [
     BrowserModule,

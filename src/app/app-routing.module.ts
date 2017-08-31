@@ -6,6 +6,7 @@ import { PickersComponent } from "./pickers/pickers.component";
 import { ModalWindowsComponent } from "./modal-windows/modal-windows.component";
 import { AutocompleteComponent, } from './autocomplete/autocomplete.component';
 import { PrimengComponent, } from './primeng/primeng.component';
+import { DurationComponent } from './duration/duration.component';
 
 @NgModule({
     imports: [RouterModule.forRoot([
@@ -18,7 +19,8 @@ import { PrimengComponent, } from './primeng/primeng.component';
         { path: "pickers", component: PickersComponent },
         { path: "modalwindows", component: ModalWindowsComponent },
         { path: "autocomplete", component: AutocompleteComponent },
-        { path: "primeng", component: PrimengComponent }
+        { path: "primeng", component: PrimengComponent },
+        { path: "duration", component: DurationComponent }
     ])],
     exports: [RouterModule] 
 })
