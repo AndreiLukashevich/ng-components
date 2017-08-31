@@ -45,12 +45,24 @@ export class CustomAutocompleteComponent implements OnInit {
         }
 
         if (this.selectedIdx > 0 && this.selectedIdx < this.filteredList.length) {
-          document.getElementById('list325').children[this.selectedIdx - 1]
+          document.getElementById('list325')
+            .children[this.selectedIdx - 1]
+            .removeAttribute('style');
+          document.getElementById('list325')
+            .children[this.selectedIdx - 1]
+            .children[0]
+            .children[0]
             .removeAttribute('style');
         }
         if (this.selectedIdx > -1 && this.selectedIdx < this.filteredList.length) {
-          document.getElementById('list325').children[this.selectedIdx]
-            .setAttribute('style', 'background-color: green');
+          document.getElementById('list325')
+            .children[this.selectedIdx]
+            .setAttribute('style', 'background-color:#0275d8');
+          document.getElementById('list325')
+            .children[this.selectedIdx]
+            .children[0]
+            .children[0]
+            .setAttribute('style', 'color:#ffffff');
         }
         //this.selectedIdx++;
         console.log(this.selectedIdx);
@@ -67,11 +79,21 @@ export class CustomAutocompleteComponent implements OnInit {
 
         if (this.selectedIdx > -1 && this.selectedIdx < this.filteredList.length - 1) {
           document.getElementById('list325').children[this.selectedIdx + 1]
+          .removeAttribute('style');
+          document.getElementById('list325')
+            .children[this.selectedIdx + 1]
+            .children[0]
+            .children[0]
             .removeAttribute('style');
         }
         if (this.selectedIdx > -1 && this.selectedIdx < this.filteredList.length) {
           document.getElementById('list325').children[this.selectedIdx]
-            .setAttribute('style', 'background-color: green');
+          .setAttribute('style', 'background-color:#0275d8');
+          document.getElementById('list325')
+            .children[this.selectedIdx]
+            .children[0]
+            .children[0]
+            .setAttribute('style', 'color:#ffffff');
         }
         console.log(this.selectedIdx);
         if (this.selectedIdx > this.filteredList.length - 1) {
@@ -86,9 +108,9 @@ export class CustomAutocompleteComponent implements OnInit {
         //   .children[0]
         //   .children[0].textContent);
         this.query = document.getElementById('list325')
-        .children[this.selectedIdx]
-        .children[0]
-        .children[0].textContent;
+          .children[this.selectedIdx]
+          .children[0]
+          .children[0].textContent;
         this.filteredList = [];
       }
       else if (event.code !== "") {

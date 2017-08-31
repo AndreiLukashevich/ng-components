@@ -25,11 +25,12 @@
 	padding:5px;
 	display: block;
 	text-decoration: none;
-	color:#7E7E7E;
+	color:#55595c;
 }
 
 .suggestions ul li a:hover{
-	background-color: #f1f1f1;
+	background-color: #0275d8;
+	color: #ffffff;
 }
 
 .test0 {
