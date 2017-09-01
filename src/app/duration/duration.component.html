@@ -1,3 +1,17 @@
 <h4>
   duration works!
 </h4>
+
+<br />
+<div class="form-group">
+  <label for="time">Duration</label>
+  <input class="form-control" id="time" 
+  [(ngModel)]="model.time" name="clock" required #time="ngModel"
+  #textbox (keyup.enter)="onKeyup(textbox.value)" [value]="clock">
+  <div [hidden]="time.valid || time.pristine" class="alert alert-danger">
+    Поле clock обязательное для заполнения
+  </div>
+  <div *ngIf="visible" class="alert alert-danger">
+    Enter number
+  </div>
+</div>
