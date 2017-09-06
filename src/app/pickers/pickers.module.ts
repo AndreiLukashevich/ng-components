@@ -12,10 +12,13 @@ import {DpDatePickerModule} from 'ng2-date-picker';
 
 import { PickersRoutingModule } from "./pickers-routing.module";
 
+import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime'
+
 import { PickersComponent } from './pickers.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { TimePickerComponent } from './time-picker/time-picker.component';
 import { DateTimePickerComponent } from './date-time-picker/date-time-picker.component';
+import { DatepickerBootstrapComponent } from './datepicker-bootstrap/datepicker-bootstrap.component';
 
 @NgModule({
     imports: [
@@ -26,13 +29,15 @@ import { DateTimePickerComponent } from './date-time-picker/date-time-picker.com
         DatePickerModule,
         DateTimePickerModule,
         PickersRoutingModule,
-        DpDatePickerModule
+        DpDatePickerModule,
+        NKDatetimeModule
     ],
     declarations: [
         PickersComponent,
         DatePickerComponent,
         TimePickerComponent,
-        DateTimePickerComponent
+        DateTimePickerComponent,
+        DatepickerBootstrapComponent
     ]
 })
 export class PickersModule { }
