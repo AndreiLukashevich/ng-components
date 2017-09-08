@@ -21,12 +21,13 @@ export class DatepickerBootstrapComponent implements OnInit {
   ngAfterViewInit() {
     // $.noConflict();
     jQuery(document).ready(function ($) {
-      $("#datepicker").datepicker({
+      $(".input-group.date").datepicker({
         multidate: true,
         orientation: "bottom left"
       });
       $("#timepicker").timepicker({
       });
+      $('#datetimepicker1').datetimepicker();
     });
   }
 

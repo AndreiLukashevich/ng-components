@@ -8,4 +8,5 @@ declare var $: JQueryStatic;
 interface JQuery {
   datepicker:any;
   timepicker:any;
+  datetimepicker:any;
 }
