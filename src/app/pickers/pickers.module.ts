@@ -20,6 +20,8 @@ import { TimePickerComponent } from './time-picker/time-picker.component';
 import { DateTimePickerComponent } from './date-time-picker/date-time-picker.component';
 import { DatepickerBootstrapComponent } from './datepicker-bootstrap/datepicker-bootstrap.component';
 
+import * as $ from 'jquery';
+
 @NgModule({
     imports: [
         CommonModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from "@angular/router";
 import { FormControl, FormGroup, Validators, FormBuilder } from "@angular/forms";
 
@@ -16,6 +16,18 @@ export class DatepickerBootstrapComponent implements OnInit {
 
   ngOnInit() {
     this.buildForm();
+  }
+
+  ngAfterViewInit() {
+    // $.noConflict();
+    jQuery(document).ready(function ($) {
+      $("#datepicker").datepicker({
+        orientation: "auto left",
+        multidate: true
+      });
+      $("#timepicker").timepicker({
+      });
+    });
   }
 
   buildForm() {

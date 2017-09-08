@@ -16,6 +16,8 @@ import { AutocompleteModule } from './autocomplete/autocomplete.module';
 import { PrimengModule } from './primeng/primeng.module';
 import { DurationComponent } from './duration/duration.component';
 
+import * as $ from 'jquery';
+
 @NgModule({
   declarations: [
     AppComponent,
