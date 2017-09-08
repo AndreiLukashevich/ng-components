@@ -3,7 +3,7 @@ applications:
   memory: 16M
   instances: 1
   domain: mybluemix.net
-  name: ng4-test
-  host: ng4-test
+  name: ng4-tc
+  host: ng4-tc
   disk_quota: 48M
   buildpack: staticfile_buildpack

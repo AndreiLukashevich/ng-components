@@ -22,8 +22,8 @@ export class DatepickerBootstrapComponent implements OnInit {
     // $.noConflict();
     jQuery(document).ready(function ($) {
       $("#datepicker").datepicker({
-        orientation: "auto left",
-        multidate: true
+        multidate: true,
+        orientation: "bottom left"
       });
       $("#timepicker").timepicker({
       });
