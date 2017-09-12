@@ -17,14 +17,14 @@ export class DateTimePickerComponent implements OnInit {
 
   configDate: IDatePickerConfig = {
     allowMultiSelect: true,
-    format: 'MM/DD/YYYY hh:mm A'
+    format: 'MM/DD/YYYY'
   };
   configTime: any = {
     format: 'hh:mm A'
   };
   config = {
     allowMultiSelect: true,
-    format: 'MM/DD/YYYY'
+    format: 'MM/DD/YYYY hh:mm A'
   };
 
   constructor(private router: Router, private fb: FormBuilder) {
