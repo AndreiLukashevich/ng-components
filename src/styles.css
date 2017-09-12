@@ -12,3 +12,5 @@ p {
     width: 500px;
     border-color:  green;
 }
+
+@import url('../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css');

@@ -1,0 +1,35 @@
+<h4>
+  date-picker-ngx works!
+</h4>
+
+<hr />
+
+<div class="container">
+  <form novalidate [formGroup]="testForm">
+    <div class="form-group">
+      <h3>Date</h3>
+      <!-- <input type="text" class="form-control" bsDatepicker #dp="bsDatepicker" [bsConfig]="bsConfig"> -->
+    </div>
+  </form>
+</div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="form-group">
+      <input type="text" class="form-control" bsDatepicker [bsConfig]="bsConfig" 
+      [placement]="'right'" [isDisabled]="false" [outsideClick]="false">
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+<hr />
+<a class="bg-success" href="https://github.com/valor-software/ngx-bootstrap">Go to the repository on GitHub</a>
+<hr />
+<hr />
+<a class="bg-primary" href="https://valor-software.com/ngx-bootstrap/#/">Go to the site PrimeNg</a>
+<hr />
+
+<button class="btn btn-danger" (click)="goToNgx()">Go Back</button>

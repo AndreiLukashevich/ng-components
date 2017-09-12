@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, Params } from "@angular/router";
-import { FormControl, FormGroup, Validators, FormBuilder } from "@angular/forms";
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 
 import { IDatePickerConfig } from '../../../../node_modules/ng2-date-picker/date-picker/date-picker-config.model';
+// import { DatePipe } from '@angular/common';
 
 @Component({
   moduleId: module.id,
@@ -13,18 +14,18 @@ import { IDatePickerConfig } from '../../../../node_modules/ng2-date-picker/date
 export class DateTimePickerComponent implements OnInit {
 
   testForm: FormGroup;
-  
+
   configDate: IDatePickerConfig = {
     allowMultiSelect: true,
-    format: "MM/DD/YYYY"
+    format: 'MM/DD/YYYY hh:mm A'
   };
   configTime: any = {
-    format: "hh:mm A"
+    format: 'hh:mm A'
   };
   config = {
-    format: "MM/DD/YYYY", 
-    allowMultiSelect: true
-  }
+    allowMultiSelect: true,
+    format: 'MM/DD/YYYY'
+  };
 
   constructor(private router: Router, private fb: FormBuilder) {
   }
@@ -43,7 +44,7 @@ export class DateTimePickerComponent implements OnInit {
   }
 
   goToPickers() {
-    this.router.navigate(["pickers"]);
+    this.router.navigate(['pickers']);
   }
 
 }

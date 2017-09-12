@@ -7,6 +7,7 @@ import { ModalWindowsComponent } from "./modal-windows/modal-windows.component";
 import { AutocompleteComponent, } from './autocomplete/autocomplete.component';
 import { PrimengComponent, } from './primeng/primeng.component';
 import { DurationComponent } from './duration/duration.component';
+import { NgxComponent } from './ngx/ngx.component';
 
 @NgModule({
     imports: [RouterModule.forRoot([
@@ -20,7 +21,8 @@ import { DurationComponent } from './duration/duration.component';
         { path: "modalwindows", component: ModalWindowsComponent },
         { path: "autocomplete", component: AutocompleteComponent },
         { path: "primeng", component: PrimengComponent },
-        { path: "duration", component: DurationComponent }
+        { path: "duration", component: DurationComponent },
+        { path: "ngx", component: NgxComponent }
     ])],
     exports: [RouterModule] 
 })
