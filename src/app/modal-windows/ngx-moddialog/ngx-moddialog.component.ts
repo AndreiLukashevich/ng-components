@@ -30,8 +30,8 @@ export class NgxModdialogComponent implements OnInit {
       .showClose(true)
       .title('A simple Alert style modal window')
       .body(`
-            <h4>Alert is a classic (title/body/footer) 1 button modal window that 
-            does not block.</h4>
+            <h5>Alert is a classic (title/body/footer) 1 button modal window that 
+            does not block.</h5>
             <b>Configuration:</b>
             <ul>
                 <li>Non blocking (click anywhere outside to dismiss)</li>

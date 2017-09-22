@@ -30,7 +30,7 @@
     "ng-auto-complete": "^1.4.12",
     "ng-pick-datetime": "^4.3.1",
     "ng2-completer": "^1.6.1",
-    "ng2-date-picker": "^2.3.0",
+    "ng2-date-picker": "^2.3.2",
     "ngx-bootstrap": "^1.9.3",
     "ngx-modialog": "^3.0.2",
     "ngx-typeahead": "0.0.21",

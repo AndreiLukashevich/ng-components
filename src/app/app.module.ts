@@ -18,6 +18,7 @@ import { PrimengModule } from './primeng/primeng.module';
 import { DurationComponent } from './duration/duration.component';
 
 import * as $ from 'jquery';
+import { AppService } from "./app.service";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import * as $ from 'jquery';
     PrimengModule,
     NgxModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,4 +12,11 @@
 	<a routerLink="/ngx" routerLinkActive="active">Ngx</a>
 </nav>
 
+<br />
+<ul>
+	<li *ngFor="let route of arrRoutes">{{ route }}</li>
+</ul>
+
+<div id="routes" [attr.routes]="arrRoutes"></div>
+
 <router-outlet></router-outlet>

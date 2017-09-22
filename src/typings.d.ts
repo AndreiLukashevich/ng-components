@@ -3,6 +3,7 @@ declare var module: NodeModule;
 interface NodeModule {
   id: string;
 }
+
 declare var jQuery: JQueryStatic;
 declare var $: JQueryStatic;
 interface JQuery {

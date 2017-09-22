@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 
-import { IDatePickerConfig } from '../../../../node_modules/ng2-date-picker/date-picker/date-picker-config.model';
-// import { DatePipe } from '@angular/common';
 
 @Component({
   moduleId: module.id,
@@ -15,14 +13,14 @@ export class DateTimePickerComponent implements OnInit {
 
   testForm: FormGroup;
 
-  configDate: IDatePickerConfig = {
+  configDate = {
     allowMultiSelect: true,
     format: 'MM/DD/YYYY'
   };
   configTime: any = {
     format: 'hh:mm A'
   };
-  config = {
+  configDateTime = {
     allowMultiSelect: true,
     format: 'MM/DD/YYYY hh:mm A'
   };
@@ -38,8 +36,7 @@ export class DateTimePickerComponent implements OnInit {
     this.testForm = this.fb.group({
       date: [],
       time: [],
-      date0: [],
-      time0: []
+      datetime: []
     });
   }
 
