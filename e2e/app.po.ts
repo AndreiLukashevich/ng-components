@@ -1,11 +1,11 @@
 import { browser, by, element } from 'protractor';
-import { Router, Route } from "@angular/router";
+// import { Router, Route } from "@angular/router";
 import { AppComponent } from '../src/app/app.component';
-import { AppService } from '../src/app/app.service';
+// import { AppService } from '../src/app/app.service';
 
 export class AppComponentPage {
-  public strTest = new AppService();
-  constructor (public testSerE2E: AppService) {}
+  // public strTest = new AppService();
+  // constructor () {}
 
   navigateTo() {
     return browser.get('/');
@@ -27,9 +27,9 @@ export class AppComponentPage {
     return browser.manage().logs().get('browser');
   }
 
-  getAllRoutes() {
-    return this.strTest.testService;
-  }
+  // getAllRoutes() {
+  //   return this.strTest.testService;
+  // }
 }
 
 export class DateTimePicker {

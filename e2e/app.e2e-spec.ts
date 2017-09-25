@@ -38,11 +38,11 @@ describe('AppComponentPage', () => {
     expect(page.getURL()).toEqual('http://localhost:49156/pickers');
   });
 
-  it('Testing AllAngular2AppRoots', () => {
-    page.navigateTo();
-    console.log(page.getAllRoutes());
-    expect(page.getAllRoutes()).toEqual('http://localhost:49156/pickers');
-  });
+  // it('Testing AllAngular2AppRoots', () => {
+  //   page.navigateTo();
+  //   console.log(page.getAllRoutes());
+  //   expect(page.getAllRoutes()).toEqual('http://localhost:49156/pickers');
+  // });
 
 });
 
