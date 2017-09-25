@@ -20,9 +20,9 @@
 </div> 
 
 <label for="date">Date</label>
-<dp-date-picker id="date" [config]="configDate" theme="dp-material" mode="day"></dp-date-picker>
+<dp-date-picker id="date" [config]="configDate" theme="dp-material" mode="day" [(ngModel)]="date"></dp-date-picker>
 <label for="time">Time</label>
-<dp-date-picker id="time" [config]="configTime" theme="dp-material" mode="time"></dp-date-picker>
+<dp-date-picker id="time" [config]="configTime" theme="dp-material" mode="time" [(ngModel)]="time"></dp-date-picker>
 
 <hr />
 <a class="bg-success" href="https://github.com/vlio20/angular-datepicker">Go to the repository on GitHub</a>
